@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An Internet controlled home appliances automation system. By Ashwani Kumar and Anirudh Khanna">
+    <meta name="author" content="Anirudh Khanna">
+
+    <title>ICE - Internet Controlled Electronics</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Demo Notice -->
+    <div id="demo-notice">
+        <button type="button" id="close-demo-notice">&times;</button>
+        <i>This is just a front-end demo of the actual project. The back-end systems aren't in action here. Apologies!</i>
+    </div>
+    
+    <!-- Page Content -->
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+
+                <a href="index.html"><img src="img/ice-brand.png" style="width: 25%; margin-bottom: 10px;" /></a>
+                <p><em>Internet Controlled Electronics: Your connected home controller!</em></p>
+                <hr /> <br />
+                
+                <!-- ICE Details -->
+                <p>ICE (Internet Controlled Electronics) is a home automation project which aims to connect the user to his home appliances via the Internet. With this smart system, the control of your home is just a click away, or more appropriately, just a voice command away.</p>
+                
+                <p>As more and more consumer connected devices hit the market, the connected home is becoming a reality. A recent report stated that today’s home has five or more connected devices. In the future that number may be as high as fifty!</p>
+
+                <br />
+                <p style="font-family: Georgia, Serif;"><big><span class="glyphicon glyphicon-home"></span> &nbsp;<em>Certainly, there is no place like a connected home</em></big></p>
+                <br />
+                
+                <!-- Login Link Button (Opens Login Modal) -->
+                <p><a href="#" data-toggle="modal" data-target="#login-modal"><button class="btn btn-info">Go!</button></a></p>
+
+                <!-- Direct Link to Controller -->
+                <p><small>{ The demo sign-in is not functional here. Jump directly to <a href="controller.html">exploring the controller &rarr;</a> }</small></p>
+
+            </div>
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    
+    <!-- Modals -->
+    
+    <!-- Login Form Modal -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-container">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title">Login</h3>
+        </div>
+        
+        <br />
+        
+        <form method="post" style="margin: 0 auto; width: 80%;">
+        <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="you@chitkara.edu.in" autofocus>
+        </div>
+        <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" name="pwd" id="pwd" placeholder="YourSecretPassword">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        
+        <br />
+        
+        <p>New here? &rarr; <a href="#" id="signup-link" data-toggle="modal" data-target="#register-modal">Register</a></p>
+    </div>
+    </div>
+    
+    <!-- Registration Form Modal -->
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-container">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title">Register</h3>
+        </div>
+        
+        <br />
+        
+        <form style="margin: 0 auto;" role="form" method="post" action="" name="form1" id="form1">
+        <div class="form-group">
+        <label for="text" class="col-sm-4">Full Name<span class="mandat">*</span></label>
+        <div class="col-sm-8">
+        <input type="text" class="form-control" name="T0" placeholder="Enter name" required>
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="number" class="col-sm-4">Mobile no.<span class="mandat">*</span></label>
+        <div class="col-sm-8">
+        <input type="number" class="form-control" name="T1" placeholder="Enter mobile number" minlength="10" maxlength="12" required>
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="email" class="col-sm-4">E-mail<span class="mandat">*</span></label>
+        <div class="col-sm-8">
+        <input type="email" class="form-control" name="T2" placeholder="Enter email" required>
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="text" class="col-sm-4">Username<span class="mandat">*</span></label>
+        <div class="col-sm-8">
+        <input type="text" class="form-control" name="T3" placeholder="Enter username" maxlength="20" required>
+        <span id="res"></span>
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="pwd" class="col-sm-4">Password<span class="mandat">*</span></label>
+        <div class="col-sm-8">
+        <input type="password" class="form-control" name="T4" placeholder="Enter password" minlength="6" maxlength="15" autocomplete="off" required>
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="pwd" class="col-sm-4">Confirm Password<span class="mandat">*</span></label>
+        <div class="col-sm-8">
+        <input type="password" class="form-control" name="T5" placeholder="Re-enter password" minlength="6" maxlength="15" autocomplete="off" required>
+        <span id="res2"></span>
+        </div>
+        </div>
+        
+        <button name="Submit" type="submit" value="Submit" class="btn btn-success">Submit</button>    
+        </form>
+    </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    &copy; ICE Project 2016 &nbsp;&bull;&nbsp;
+                    Created by Ashwani and Anirudh &nbsp;&bull;&nbsp;
+                    <img src="img/ice-brand.png" style="height: 20px;">
+                </div>
+            </div>
+        </div>
+    </footer> <!-- /.footer -->
+
+</body>
+
+</html>
